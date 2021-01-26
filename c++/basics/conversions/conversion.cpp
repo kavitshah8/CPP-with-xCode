@@ -1,6 +1,6 @@
 #include <iostream>
 
-// Misc readings
+// Most relevant
 // https://en.cppreference.com/w/cpp/language/cast_operator
 // https://stackoverflow.com/questions/15999123/const-before-parameter-vs-const-after-function-name-c
 
@@ -14,6 +14,7 @@ struct T {
     std::string b;
     std::string c;
 
+    // If anyone wants to convert struct T to a std::string, give them this.a
     operator std::string() const {
         std::cout << "User defined cast got invokesd" << std::endl;
         return this->a;
@@ -32,10 +33,10 @@ void log(T a, T b, T c) {
     std::cout << "T A = " << a.a << ", T B = " << b.b << ", T C = " << c.c << "\n" << std::endl;
 }
 
-int main() {
-    T a = {"TFoo"};
-    T b = {"TFoo", "TBro"};
-    T c = {"TFoo", "TBro", "TBro"};
+int conversions() {
+    T a = {"aFoo"};
+    T b = {"bFoo", "bBar"};
+    T c = {"cFoo", "cBar", "cBro"};
     log("foo", "bar", "bro");
     log(a, b, c);
 
