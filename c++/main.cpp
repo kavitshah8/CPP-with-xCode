@@ -1,23 +1,13 @@
-//
-//  main.cpp
-//  c++
-//
-//  Created by Kavit Shah on 12/22/20.
-//
+#include "basics/threads/schedulingThreads.cpp"
 
-#include <iostream>
-#include "basics/threads/processVsThread.cpp"
-
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Main Process ID %d \n", getpid());
-    printf("Main Thread ID %d \n", std::this_thread::get_id());
-    std::thread t1(cpu_waster);
-    std::thread t2(cpu_waster);
-    
-    while (true)
-    {
-        std::this_thread::sleep_for(std::chrono::seconds(5));
-    }
+int main()
+{
+    std::thread thread1(countCalls, "thread1");
+    std::thread thread2(countCalls, "thread2");
+    std::this_thread::sleep_for(std::chrono::seconds(1));
+    isActive = false;
+    thread1.join();
+    thread2.join();
     return 0;
 }
+
