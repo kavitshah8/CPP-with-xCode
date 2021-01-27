@@ -1,12 +1,14 @@
 
 #include <thread>
 #include <iostream>
+
 int counter = 0;
 
 void foo()
 {
     for(int i = 0; i < 10000; i++)
     {
+        // Both threads trying to modify the same shared resource
         counter++;
     }
 }
