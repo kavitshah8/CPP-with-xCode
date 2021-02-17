@@ -15,7 +15,8 @@ void foo()
 
 int main()
 {
-    std::thread t1(foo);
+    std::thread t1;
+    t1 = std::thread(foo);
     std::thread t2(foo);
     t1.join();
     t2.join();

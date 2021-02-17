@@ -18,15 +18,15 @@ void countCalls(const char* name)
     printf(" %s receveived %d calls \n", name, callCounter);
 }
 
-//int main()
-//{
-//    std::thread thread1(countCalls, "thread1");
-//    std::thread thread2(countCalls, "thread2");
-//    std::this_thread::sleep_for(std::chrono::seconds(1));
+int main()
+{
+    std::thread thread1(countCalls, "thread1");
+    std::thread thread2(countCalls, "thread2");
+    std::this_thread::sleep_for(std::chrono::seconds(1));
 //    set a breakpoint here to see both threads
-//    isActive = false;
-//    thread1.join();
-//    thread2.join();
-//    return 0;
-//}
-//
+    isActive = false;
+    thread1.join();
+    thread2.join();
+    return 0;
+}
+
