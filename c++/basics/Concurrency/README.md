@@ -59,3 +59,9 @@ else
     return FALSE.
     All other calling threads continue doing other things and do not enter the waiting state.
 ```
+
+---
+
+Useful functions:
+
+[std::this_thread::sleep_for](https://en.cppreference.com/w/cpp/thread/sleep_for)
