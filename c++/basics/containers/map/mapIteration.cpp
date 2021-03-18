@@ -12,7 +12,7 @@ int main() {
         {5, 50},
         {3, 30},
         {1, 10},
-        {2, 200}ñ // Duplicate keys will be ignored
+        {2, 200} // Duplicate keys will be ignored
     };
 
     std::multimap<int, int> intMultiMap {

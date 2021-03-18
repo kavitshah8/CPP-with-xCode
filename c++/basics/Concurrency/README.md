@@ -27,8 +27,10 @@ A: If a thread which owns a mutex, tries to lock it, it enters into waiting stat
 
 ## Locks 
 
- - [lock_guard](http://www.cplusplus.com/reference/mutex/lock_guard/)
  - [unique_lock](http://www.cplusplus.com/reference/mutex/unique_lock/)
+    Used with conditional variable
+
+ - [lock_guard](http://www.cplusplus.com/reference/mutex/lock_guard/)
  - [scoped_lock](https://en.cppreference.com/w/cpp/thread/scoped_lock)
 
 It guarantees the mutex object is properly unlocked in case an exception is thrown.
