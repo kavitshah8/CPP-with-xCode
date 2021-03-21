@@ -1,137 +1,122 @@
 /**
- * Challenge: Multiply two matrices
+ * Challenge: Sort an array of random integers with merge sort
  */
 #include <thread>
-#include <cmath>
 
-/* sequential implementation of matrix multiply */
-void sequential_matrix_multiply(long ** A, size_t num_rows_a, size_t num_cols_a,
-                                long ** B, size_t num_rows_b, size_t num_cols_b,
-                                long ** C) {
-    for (size_t i=0; i<num_rows_a; i++) {
-        for (size_t j=0; j<num_cols_b; j++) {
-            C[i][j] = 0; // initialize result cell to zero
-            for (size_t k=0; k<num_cols_a; k++) {
-                C[i][j] += A[i][k] * B[k][j];
-            }
-        }
+/* declaration of merge helper function */
+void merge(int * array, unsigned int left, unsigned int mid, unsigned int right);
+
+/* sequential implementation of merge sort */
+void sequential_merge_sort(int * array, unsigned int left, unsigned int right) {
+    if (left < right) {
+        unsigned int mid = (left + right) / 2; // find the middle point
+        sequential_merge_sort(array, left, mid); // sort the left half
+        sequential_merge_sort(array, mid+1, right); // sort the right half
+        merge(array, left, mid, right); // merge the two sorted halves
     }
 }
 
-void worker_multiply(long ** A, size_t num_rows_a, size_t num_cols_a,
-                         long ** B, size_t num_rows_b, size_t num_cols_b,
-                         long ** C, size_t start_rows_c, size_t end_rows_c) {
-    for (size_t i = start_rows_c; i < end_rows_c; i++) {
-        for (size_t j = 0; j < num_cols_b; j++) {
-            C[i][j] = 0;
-            for (size_t k = 0; k < num_cols_a; k++) {
-                C[i][j] += A[i][k]*B[k][j];
-            }
-        }
+/* parallel implementation of merge sort */
+void parallel_merge_sort(int * array, unsigned int left, unsigned int right, unsigned int depth=0) {
+
+    // workers <= #nodes
+    // workers <= pow(2, depth)
+    // log(workers) <= depth
+    if (log(std::thread::hardware_concurrency()) <= depth) {
+        sequential_merge_sort(array, left, right);
+    } else {
+        unsigned int mid = (left + right) / 2;
+        
+        // threads do not have parent children relationship
+        std::thread left_thread(parallel_merge_sort, array, left, mid, depth+1);
+        
+        parallel_merge_sort(array, mid+1, right, depth+1);
+        left_thread.join();
+        // Merge will not be called until all the threads finish executing
+        merge(array, left, mid, right);
     }
+    
 }
 
-/* parallel implementation of matrix multiply */
-void parallel_matrix_multiply(long ** A, size_t num_rows_a, size_t num_cols_a,
-                              long ** B, size_t num_rows_b, size_t num_cols_b,
-                              long ** C) {
-    size_t num_workers = std::thread::hardware_concurrency();
-    size_t chunk_size = ceil((float)num_rows_a/num_workers);
-
-    std::thread workers[num_workers];
-    // assign task to each worker
-    for (size_t i = 0; i < num_workers; i++)
-    {
-        size_t start_row_c = std::min(i*chunk_size, num_rows_a);
-        size_t end_row_c = std::min((i+1)*chunk_size, num_rows_a);
-        // Note: Do not call function, pass as arguments
-        workers[i] = std::thread(worker_multiply, A, num_rows_a, num_cols_a,
-                                           B, num_rows_b, num_cols_b,
-                                           C, start_row_c, end_row_c);
-    }
-    // Note: If you copy by removing &, then private ctor is called
-    for (auto &w: workers) {
-        w.join();
+/* helper function to merge two sorted subarrays
+   array[l..m] and array[m+1..r] into array */
+void merge(int * array, unsigned int left, unsigned int mid, unsigned int right) {
+    unsigned int num_left = mid - left + 1; // number of elements in left subarray
+    unsigned int num_right = right - mid; // number of elements in right subarray
+    
+    // copy data into temporary left and right subarrays to be merged
+    int array_left[num_left], array_right[num_right];
+    std::copy(&array[left], &array[mid + 1], array_left);
+    std::copy(&array[mid + 1], &array[right + 1], array_right);
+    
+    // initialize indices for array_left, array_right, and input subarrays
+    unsigned int index_left = 0;    // index to get elements from array_left
+    unsigned int index_right = 0;    // index to get elements from array_right
+    unsigned int index_insert = left; // index to insert elements into input array
+    
+    // merge temporary subarrays into original input array
+    while ((index_left < num_left) || (index_right < num_right)) {
+        if ((index_left < num_left) && (index_right < num_right)) {
+            if (array_left[index_left] <= array_right[index_right]) {
+                array[index_insert] = array_left[index_left];
+                index_left++;
+            }
+            else {
+                array[index_insert] = array_right[index_right];
+                index_right++;
+            }
+        }
+        // copy any remain elements of array_left into array
+        else if (index_left < num_left){
+            array[index_insert] = array_left[index_left];
+            index_left += 1;
+        }
+        // copy any remain elements of array_right into array
+        else if (index_right < num_right) {
+            array[index_insert] = array_right[index_right];
+            index_right += 1;
+        }
+        index_insert++;
     }
 }
 
 int main() {
-    const int NUM_EVAL_RUNS = 3;
-    const size_t NUM_ROWS_A = 1000;
-    const size_t NUM_COLS_A = 1000;
-    const size_t NUM_ROWS_B = NUM_COLS_A;
-    const size_t NUM_COLS_B = 1000;
-
-    // intialize A with values in range 1 to 100
-    long ** A = (long **)malloc(NUM_ROWS_A * sizeof(long *));
-    if (A == NULL) {
-        exit(2);
-    }
-    for (size_t i=0; i<NUM_ROWS_A; i++) {
-        A[i] = (long *)malloc(NUM_COLS_A * sizeof(long));
-        if (A[i] == NULL) {
-            exit(2);
-        }
-        for (size_t j=0; j<NUM_COLS_A; j++) {
-            A[i][j] = rand() % 100 + 1;
-        }
-    }
-
-    // intialize B with values in range 1 to 100
-    long ** B = (long **)malloc(NUM_ROWS_B * sizeof(long *));
-    if (B == NULL) {
-        exit(2);
-    }
-    for (size_t i=0; i<NUM_ROWS_B; i++) {
-        B[i] = (long *)malloc(NUM_COLS_B * sizeof(long));
-        if (B[i] == NULL) {
-            exit(2);
-        }
-        for (size_t j=0; j<NUM_COLS_B; j++) {
-            B[i][j] = rand() % 100 + 1;
-        }
-    }
-
-    // allocate arrays for sequential and parallel results
-    long ** sequential_result = (long **)malloc(NUM_ROWS_A * sizeof(long *));
-    long ** parallel_result = (long **)malloc(NUM_ROWS_A * sizeof(long *));
-    if ((sequential_result == NULL) || (parallel_result == NULL)) {
-        exit(2);
-    }
-    for (size_t i=0; i<NUM_ROWS_A; i++) {
-        sequential_result[i] = (long *)malloc(NUM_COLS_B * sizeof(long));
-        parallel_result[i] = (long *)malloc(NUM_COLS_B * sizeof(long));
-        if ((sequential_result[i] == NULL) || (parallel_result[i] == NULL)) {
-            exit(2);
-        }
+    const int NUM_EVAL_RUNS = 100;
+    const int N = 100000; // number of elements to sort
+    
+    int original_array[N], sequential_result[N], parallel_result[N];
+    for (int i=0; i<N; i++) {
+        original_array[i] = rand();
     }
 
     printf("Evaluating Sequential Implementation...\n");
     std::chrono::duration<double> sequential_time(0);
-    sequential_matrix_multiply(A, NUM_ROWS_A, NUM_COLS_A, B, NUM_ROWS_B, NUM_COLS_B, sequential_result); // "warm up"
+    std::copy(&original_array[0], &original_array[N-1], sequential_result);
+    sequential_merge_sort(sequential_result, 0, N-1); // "warm up"
     for (int i=0; i<NUM_EVAL_RUNS; i++) {
-        auto startTime = std::chrono::high_resolution_clock::now();
-        sequential_matrix_multiply(A, NUM_ROWS_A, NUM_COLS_A, B, NUM_ROWS_B, NUM_COLS_B, sequential_result);
-        sequential_time += std::chrono::high_resolution_clock::now() - startTime;
+        std::copy(&original_array[0], &original_array[N-1], sequential_result); // reset result array
+        auto start_time = std::chrono::high_resolution_clock::now();
+        sequential_merge_sort(sequential_result, 0, N-1);
+        sequential_time += std::chrono::high_resolution_clock::now() - start_time;
     }
     sequential_time /= NUM_EVAL_RUNS;
-
+    
     printf("Evaluating Parallel Implementation...\n");
     std::chrono::duration<double> parallel_time(0);
-    parallel_matrix_multiply(A, NUM_ROWS_A, NUM_COLS_A, B, NUM_ROWS_B, NUM_COLS_B, parallel_result); // "warm up"
+    std::copy(&original_array[0], &original_array[N-1], parallel_result);
+    parallel_merge_sort(parallel_result, 0, N-1); // "warm up"
     for (int i=0; i<NUM_EVAL_RUNS; i++) {
-        auto startTime = std::chrono::high_resolution_clock::now();
-        parallel_matrix_multiply(A, NUM_ROWS_A, NUM_COLS_A, B, NUM_ROWS_B, NUM_COLS_B, parallel_result);
-        parallel_time += std::chrono::high_resolution_clock::now() - startTime;
+        std::copy(&original_array[0], &original_array[N - 1], parallel_result); // reset result array
+        auto start_time = std::chrono::high_resolution_clock::now();
+        parallel_merge_sort(parallel_result, 0, N-1);
+        parallel_time += std::chrono::high_resolution_clock::now() - start_time;
     }
     parallel_time /= NUM_EVAL_RUNS;
     
-    // verify sequential and parallel results
-    for (size_t i=0; i<NUM_ROWS_A; i++) {
-        for (size_t j=0; j<NUM_COLS_B; j++) {
-            if (sequential_result[i][j] != parallel_result[i][j]) {
-                printf("ERROR: Result mismatch at row %ld, col %ld!\n", i, j);
-            }
+    // verify sequential and parallel results are same
+    for (int i=0; i<N; i++) {
+        if (sequential_result[i] != parallel_result[i]) {
+            printf("ERROR: Result mismatch at index %d!\n", i);
         }
     }
     printf("Average Sequential Time: %.2f ms\n", sequential_time.count()*1000);
