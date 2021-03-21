@@ -242,6 +242,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				"HEADER_SEARCH_PATHS[arch=*]" = /usr/bin;
+				"OTHER_LDFLAGS[arch=*]" = "-lcurl";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -250,6 +252,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				"HEADER_SEARCH_PATHS[arch=*]" = /usr/bin;
+				"OTHER_LDFLAGS[arch=*]" = "-lcurl";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
