@@ -4,6 +4,8 @@
 #include <thread>
 #include <cmath>
 
+// Learnings: Using threads in a nested loop
+
 /* sequential implementation of matrix multiply */
 void sequential_matrix_multiply(long ** A, size_t num_rows_a, size_t num_cols_a,
                                 long ** B, size_t num_rows_b, size_t num_cols_b,
