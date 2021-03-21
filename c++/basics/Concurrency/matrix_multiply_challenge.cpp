@@ -108,7 +108,8 @@ int main() {
 
     printf("Evaluating Sequential Implementation...\n");
     std::chrono::duration<double> sequential_time(0);
-    sequential_matrix_multiply(A, NUM_ROWS_A, NUM_COLS_A, B, NUM_ROWS_B, NUM_COLS_B, sequential_result); // "warm up"
+    // "warm up" to avoid slow run if just in time compilation is ON
+    sequential_matrix_multiply(A, NUM_ROWS_A, NUM_COLS_A, B, NUM_ROWS_B, NUM_COLS_B, sequential_result);
     for (int i=0; i<NUM_EVAL_RUNS; i++) {
         auto startTime = std::chrono::high_resolution_clock::now();
         sequential_matrix_multiply(A, NUM_ROWS_A, NUM_COLS_A, B, NUM_ROWS_B, NUM_COLS_B, sequential_result);
@@ -118,7 +119,8 @@ int main() {
 
     printf("Evaluating Parallel Implementation...\n");
     std::chrono::duration<double> parallel_time(0);
-    parallel_matrix_multiply(A, NUM_ROWS_A, NUM_COLS_A, B, NUM_ROWS_B, NUM_COLS_B, parallel_result); // "warm up"
+    // "warm up" to avoid slow run if just in time compilation is ON
+    parallel_matrix_multiply(A, NUM_ROWS_A, NUM_COLS_A, B, NUM_ROWS_B, NUM_COLS_B, parallel_result);
     for (int i=0; i<NUM_EVAL_RUNS; i++) {
         auto startTime = std::chrono::high_resolution_clock::now();
         parallel_matrix_multiply(A, NUM_ROWS_A, NUM_COLS_A, B, NUM_ROWS_B, NUM_COLS_B, parallel_result);
