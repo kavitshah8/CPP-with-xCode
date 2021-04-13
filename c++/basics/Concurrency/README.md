@@ -8,45 +8,27 @@ Threads are in one for the following states:
     - Terminate
 
 std::thread::joinable()
+std::thread::detach()
+
+[std::thread ctor](https://en.cppreference.com/w/cpp/thread/thread/thread)
 
 ---
 
 # Mutex
 
 ---
+
 ## std::mutex
 
- - When a thread tries to lock the mutex, if the mutex is not available it enters into waiting state.
+- When a thread tries to lock the mutex, if the mutex is not available it enters into waiting state.
 
----
+    ```
+    std::mutex m_mutex;
 
-## std::recursive_mutex
- 
- - If a thread try to lock the same mutex twice, behavior is undefined and may create a Deadlock.
-
-Q: Why does locking the same mutex twice can create a deadlock?
-
-A: If a thread which owns a mutex, tries to lock it, it enters into waiting state. As the thread is blocked in the waiting state, it can not unlock the mutex. Deadlock! 
-
- - [std::recursive_mutex](https://en.cppreference.com/w/cpp/thread/recursive_mutex) allow you to lock same mutex multiple times. They are needed to protect the critical section of the code in a recursive functions.
-
----
-
-## std::shared_mutex
-
- - number of readers > number of writers
-
----
-
-## Locks 
-
- - [unique_lock](http://www.cplusplus.com/reference/mutex/unique_lock/)
-    Used with conditional variable
-
- - [lock_guard](http://www.cplusplus.com/reference/mutex/lock_guard/)
- - [scoped_lock](https://en.cppreference.com/w/cpp/thread/scoped_lock)
-
-It guarantees the mutex object is properly unlocked in case an exception is thrown.
+    m_mutex.lock();
+    // execute critical section
+    m_mutex.unlock();
+    ```
 
 ---
 
@@ -74,6 +56,40 @@ else
     return FALSE.
     All other calling threads continue doing other things and do not enter the waiting state.
 ```
+---
+
+## std::recursive_mutex
+ 
+ - If a thread try to lock the same mutex twice, behavior is undefined and may create a Deadlock.
+
+Q: Why does locking the same mutex twice can create a deadlock?
+
+A: If a thread which owns a mutex, tries to lock it, it enters into waiting state. As the thread is blocked in the waiting state, it can not unlock the mutex. Deadlock! 
+
+ - [std::recursive_mutex](https://en.cppreference.com/w/cpp/thread/recursive_mutex) allow you to lock same mutex multiple times. They are needed to protect the critical section of the code in a recursive functions.
+
+---
+
+## std::shared_mutex
+
+- Use when `# threads reading > # threads writing`
+
+---
+
+## Locks - wrapper around mutex so we do not need to manage locking and unlocking the mutex. Also, has deadlock prevention algorithms.
+
+ - [unique_lock](http://www.cplusplus.com/reference/mutex/unique_lock/)
+    Used with conditional variable. 
+    
+    ```
+    std::mutxe m_mutex;
+    std::unique_lock<std::mutex> lck(m_mutex);
+    ```
+
+ - [lock_guard](http://www.cplusplus.com/reference/mutex/lock_guard/)
+ - [scoped_lock](https://en.cppreference.com/w/cpp/thread/scoped_lock)
+
+It guarantees the mutex object is properly unlocked in case an exception is thrown.
 
 ---
 

@@ -3,19 +3,21 @@
 #include <iostream>
 #include <vector>
 
-// std::atomic<int> counter;
 // Shared resources. Potential source of the data race.
 int counter;
-std::mutex m_mutex;
+
+// 1. std::atomic<int> counter;
+// 2. protect it with mutex
+// std::mutex m_mutex;
 
 void worker()
 {
     for(int i = 0; i < 10000; i++)
     {
-        m_mutex.lock();
+        // 2. m_mutex.lock();
         // Both threads trying to modify the same shared resource
         counter++;
-        m_mutex.unlock();
+        // 2. m_mutex.unlock();
     }
 }
 
