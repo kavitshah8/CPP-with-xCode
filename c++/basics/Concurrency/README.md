@@ -1,3 +1,16 @@
+# Thread
+
+Threads are in one for the following states:
+
+    - New
+    - Runnable
+    - Blocked
+    - Terminate
+
+std::thread::joinable()
+
+---
+
 # Mutex
 
 ---

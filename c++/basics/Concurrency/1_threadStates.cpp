@@ -19,6 +19,9 @@ int main()
     
     std::cout << "Done with Main, waiting for task" << std::endl;
     
+    // Usually join() is called from the destructor of the class
+    // To make sure before we delete the object, thread associated with the object terminates
+    // If we forget to do that then process will terminate, resulting in an appliaction crash
     if (task.joinable())
         task.join();
     
