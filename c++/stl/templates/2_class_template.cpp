@@ -54,6 +54,7 @@ void runner()
     
     tv.printStore();
     
+    // Class Template with Function Template
     TemplatedArray<int> result = functionTemplate::square(tv);
     
     result.printStore();

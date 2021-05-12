@@ -12,7 +12,7 @@ void runner() {
     std::cout << square<int>(5) << std::endl;
     std::cout << square<double>(5.5) << std::endl;
     
-    // Data Type infered from the parameter
+    // For function templates, data type can be infered from the parameter 
     std::cout << square(5) << std::endl;
     std::cout << square(5.5) << std::endl;
 }
