@@ -2,8 +2,25 @@
 #include <vector>
 using namespace std;
 
+/**
+ * All three container types have below common APIs
+ */
+void commonAPI() {
+    vector<int> common = {4, 5, 6, 7};
+    // copy ctor
+    vector<int> commonCopy(common);
+
+    commonCopy.clear();
+
+    common.swap(commonCopy);
+
+    cout << commonCopy.size() << endl;
+    cout << commonCopy.empty() << endl;
+    
+}
+
 void vectorIterations() {
-    std::vector<int> v = {7, 5, 16, 8};
+    vector<int> v = {7, 5, 16, 8};
     
     // Three ways of iterating over vector 
     // 1. like an array
@@ -15,7 +32,7 @@ void vectorIterations() {
     // 2. Recommended way of iterating a vector
     // - Faster & works on all the sequence containers
     for_each(v.begin(), v.end(), [](int i) {
-        std::cout << i << std::endl;
+        cout << i << endl;
     });
     
     // 3. Since c++11
@@ -29,7 +46,7 @@ void vectorIterations() {
     }
  
     for_each(v.begin(), v.end(), [](int i) {
-        std::cout << i << std::endl;
+        cout << i << endl;
     });
 
 }

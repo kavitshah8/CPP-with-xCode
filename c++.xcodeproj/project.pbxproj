@@ -14,7 +14,6 @@
 		CFE810312650CAFE00114D6D /* mapFind.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFE810282650CAFE00114D6D /* mapFind.cpp */; };
 		CFE810322650CAFE00114D6D /* mapIteration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFE810292650CAFE00114D6D /* mapIteration.cpp */; };
 		CFE810332650CAFE00114D6D /* vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFE8102B2650CAFE00114D6D /* vector.cpp */; };
-		CFE8103B2650CCDD00114D6D /* headers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFE8103A2650CCDD00114D6D /* headers.cpp */; };
 		CFE8107E2650CCF600114D6D /* strings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFE8103F2650CCF600114D6D /* strings.cpp */; };
 		CFE8107F2650CCF600114D6D /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = CFE810412650CCF600114D6D /* Makefile */; };
 		CFE810802650CCF600114D6D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFE810422650CCF600114D6D /* main.cpp */; };
@@ -82,7 +81,6 @@
 		CFE810282650CAFE00114D6D /* mapFind.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mapFind.cpp; sourceTree = "<group>"; };
 		CFE810292650CAFE00114D6D /* mapIteration.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mapIteration.cpp; sourceTree = "<group>"; };
 		CFE8102B2650CAFE00114D6D /* vector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vector.cpp; sourceTree = "<group>"; };
-		CFE8103A2650CCDD00114D6D /* headers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = headers.cpp; sourceTree = "<group>"; };
 		CFE8103F2650CCF600114D6D /* strings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = strings.cpp; sourceTree = "<group>"; };
 		CFE810412650CCF600114D6D /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		CFE810422650CCF600114D6D /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -131,6 +129,8 @@
 		CFE810AC2650CD1A00114D6D /* 1_threadStates.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = 1_threadStates.cpp; sourceTree = "<group>"; };
 		CFE810AD2650CD1A00114D6D /* schedulingThreads.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = schedulingThreads.cpp; sourceTree = "<group>"; };
 		CFE810AE2650CD1A00114D6D /* 2_detachedThreads.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = 2_detachedThreads.cpp; sourceTree = "<group>"; };
+		CFE810C72650FC2A00114D6D /* headers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = headers.h; sourceTree = "<group>"; };
+		CFE810CC2650FCE000114D6D /* vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vector.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +174,7 @@
 		CFE8101F2650CAFE00114D6D /* stl */ = {
 			isa = PBXGroup;
 			children = (
+				CFE810C72650FC2A00114D6D /* headers.h */,
 				CFE810202650CAFE00114D6D /* templates */,
 				CFE810242650CAFE00114D6D /* containers */,
 			);
@@ -193,7 +194,6 @@
 		CFE810242650CAFE00114D6D /* containers */ = {
 			isa = PBXGroup;
 			children = (
-				CFE8103A2650CCDD00114D6D /* headers.cpp */,
 				CFE810262650CAFE00114D6D /* README.md */,
 				CFE810272650CAFE00114D6D /* map */,
 				CFE8102A2650CAFE00114D6D /* sequence */,
@@ -213,6 +213,7 @@
 		CFE8102A2650CAFE00114D6D /* sequence */ = {
 			isa = PBXGroup;
 			children = (
+				CFE810CC2650FCE000114D6D /* vector.h */,
 				CFE8102B2650CAFE00114D6D /* vector.cpp */,
 			);
 			path = sequence;
@@ -589,7 +590,6 @@
 				CFE810832650CCF600114D6D /* main.cpp in Sources */,
 				CFE8108A2650CCF600114D6D /* uniquePointers.cpp in Sources */,
 				CFE810BC2650CD1A00114D6D /* 2_detachedThreads.cpp in Sources */,
-				CFE8103B2650CCDD00114D6D /* headers.cpp in Sources */,
 				CFE810892650CCF600114D6D /* main.cpp in Sources */,
 				CFE810962650CCF600114D6D /* main.cpp in Sources */,
 				CFE810302650CAFE00114D6D /* 2_class_template.cpp in Sources */,
