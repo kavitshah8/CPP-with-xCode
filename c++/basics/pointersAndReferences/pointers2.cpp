@@ -1,6 +1,6 @@
 #include <iostream>
 
-int main() {
+int mainPointers() {
     int x = 10;
     // can be changed, in the sense it can point to some other variable
     int *pointerToX = &x;

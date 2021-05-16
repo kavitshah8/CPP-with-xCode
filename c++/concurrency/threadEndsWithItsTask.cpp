@@ -2,7 +2,7 @@
 #include <thread>
 
 using namespace std;
-void task()
+void detachedTask()
 {
     int i =1;
     while (i<10)
@@ -13,10 +13,10 @@ void task()
     
 }
 
-int main()
+int mainThreadWTask()
 {
     // Note thread ends when it's task ends
-    std::thread ta(task);
+    std::thread ta(detachedTask);
     
     bool f = true;
     while(f)

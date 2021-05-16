@@ -12,10 +12,10 @@ void cpu_waster()
 //#include <iostream>
 //#include "basics/threads/processVsThread.cpp"
 //
-//int main(int argc, const char * argv[]) {
+//int mainTest(int argc, const char * argv[]) {
 //    // insert code here...
-//    printf("Main Process ID %d \n", getpid());
-//    printf("Main Thread ID %d \n", std::this_thread::get_id());
+//    printf("mainTest Process ID %d \n", getpid());
+//    printf("mainTest Thread ID %d \n", std::this_thread::get_id());
 //    std::thread t1(cpu_waster);
 //    std::thread t2(cpu_waster);
 //

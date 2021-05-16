@@ -1,4 +1,4 @@
-#include "iostream"
+#include <iostream>
 
 struct Numbers
 {
@@ -21,9 +21,8 @@ void logNumber(Numbers a, Numbers b)
     std::cout << "Numbers are = \n " << a.a << " AND " << b.a << std::endl;
 }
 
-int main()
+int mainOperator()
 {
-
     Numbers num1 = {10};
     Numbers num2 = {10, 10.1};
     logNumber(num1.a, num1.a);

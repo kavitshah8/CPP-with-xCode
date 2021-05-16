@@ -7,7 +7,7 @@ struct Student {
     int age;
 };
 
-int main() {
+int mainVec() {
     std::vector<int> v = {7, 5, 16, 8};
     Student s1 = {"K", 1};
     Student s2;

@@ -1,6 +1,6 @@
-#include "1_function_template.cpp"
+// #include "1_function_template.cpp"
 #include <iostream>
-
+ 
 namespace classTemplate {
 
 const int SIZE = 1000;
@@ -42,7 +42,7 @@ TemplatedArray<T> operator* (const TemplatedArray<T>& rhs1, const TemplatedArray
     return result;
 }
 
-void runner()
+void runnerTe()
 {
     // One must explicitly specify the type unlike the function template
     // function templates can infer types but class templates can not
@@ -55,9 +55,9 @@ void runner()
     tv.printStore();
     
     // Class Template with Function Template
-    TemplatedArray<int> result = functionTemplate::square(tv);
+//    TemplatedArray<int> result = square(tv);
     
-    result.printStore();
+//    result.printStore();
 }
 
 }

@@ -80,7 +80,7 @@ void merge(int * array, unsigned int left, unsigned int mid, unsigned int right)
     }
 }
 
-int main() {
+void mainMerge() {
     const int NUM_EVAL_RUNS = 100;
     const int N = 100000; // number of elements to sort
     

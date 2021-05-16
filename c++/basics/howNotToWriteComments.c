@@ -2,7 +2,7 @@
 
 // gcc howNotToWriteComments.c && ./a.out
 
-int main()
+int mainNot()
 {
 int n = 6;
 int p = 5;

@@ -10,11 +10,11 @@ void task() {
     }
 }
 
-int main() {
+int mainDetached() {
     std::thread detachedWorker(task);
     // You may never use detach()
     // Programer should make sure all the resources are deleted properly
-    // before the appliation terminates or main() returns
+    // before the appliation terminates or mainTest() returns
     // detachedWorker.join(); // creates an infinite loop
     detachedWorker.detach();
     

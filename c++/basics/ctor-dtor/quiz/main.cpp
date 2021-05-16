@@ -1,4 +1,6 @@
 #include <iostream>
+namespace pair {
+
 class Pair
 {
 public:
@@ -29,12 +31,12 @@ Pair::~Pair()
   delete pb;
   pb = nullptr;
 }
-/* Here is a main() function you can use
+/* Here is a mainTest() function you can use
   * to check your implementation of the
   * class Pair member functions.
   */
 
-int main()
+int mainPair()
 {
   Pair p(15, 16);
   Pair q(p);
@@ -47,3 +49,4 @@ int main()
             << "But you may want to print other diagnostic messages too." << std::endl;
   return 0;
 }
+};

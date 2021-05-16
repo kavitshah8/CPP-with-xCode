@@ -18,7 +18,7 @@ void countCalls(const char* name)
     printf(" %s receveived %d calls \n", name, callCounter);
 }
 
-int main()
+int mainSche()
 {
     std::thread thread1(countCalls, "thread1");
     std::thread thread2(countCalls, "thread2");

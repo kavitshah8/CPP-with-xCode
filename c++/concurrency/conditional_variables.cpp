@@ -7,7 +7,7 @@
 std::condition_variable cv;
 std::mutex m;
 
-void foo()
+void fooCV()
 {
     std::unique_lock<std::mutex> lck(m);
     cv.wait(lck);
@@ -15,12 +15,12 @@ void foo()
 
 void bar()
 {
-    foo();
+    fooCV();
     std::this_thread::sleep_for(std::chrono::milliseconds(5000));
     cv.notify_all();
 }
 
-int main()
+void mainCV()
 {
     bar();
 }

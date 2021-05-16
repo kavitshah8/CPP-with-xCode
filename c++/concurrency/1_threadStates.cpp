@@ -11,13 +11,13 @@ void process()
     std::cout << "Done with process" << std::endl;
 }
 
-int main()
+int mainTask()
 {
     std::thread task(process);
     
     std::this_thread::sleep_for(milliseconds(1000));
     
-    std::cout << "Done with Main, waiting for task" << std::endl;
+    std::cout << "Done with mainTest, waiting for task" << std::endl;
     
     // Usually join() is called from the destructor of the class
     // To make sure before we delete the object, thread associated with the object terminates

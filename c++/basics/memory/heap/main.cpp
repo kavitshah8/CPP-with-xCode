@@ -9,7 +9,7 @@ class Cube {
             length = a;
         };
 };
-int main () {
+int mainTest () {
     // Creates a cube object on Heap
     Cube *cPtr = new Cube;
     // Creates a cube object on Stack

@@ -44,7 +44,7 @@ void shop_lock()
     }
 }
 
-int main()
+int mainLock()
 {
     auto start_time = std::chrono::steady_clock::now();
     std::thread k(shop_lock);

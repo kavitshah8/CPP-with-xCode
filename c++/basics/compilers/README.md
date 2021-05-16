@@ -1,6 +1,6 @@
 // https://gcc.gnu.org/onlinedocs/gcc/C-Dialect-Options.html#C-Dialect-Option
 
-🚴  ~/code/CPP/basics/containers/vector  (master) 🏊 g++ main.cpp -std=c++20
+🚴  ~/code/CPP/basics/containers/vector  (master) 🏊 g++ mainTest.cpp -std=c++20
 error: invalid value 'c++20' in '-std=c++20'
 note: use 'c++98' or 'c++03' for 'ISO C++ 1998 with amendments' standard
 note: use 'gnu++98' or 'gnu++03' for 'ISO C++ 1998 with amendments and GNU extensions' standard

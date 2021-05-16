@@ -1,28 +1,28 @@
 #include <iostream>
 using namespace std;
 
-void foo() {
+void barFoo() {
     int y = 9;
-    cout << "y in foo is = " << y << endl;
-    cout << "Address y in foo is = " << &y << endl;
+    cout << "y in barFoo is = " << y << endl;
+    cout << "Address y in barFoo is = " << &y << endl;
 }
 
-int main() {
+int mainStack() {
     int z;
     int x = 7;
 
     // stack memory starts with the highest address available in the memory. 
     // Usually involving addreess space with ffff
-    cout << "x in main is = " << x << endl;
-    cout << "Address of x in main is = " << &x << endl;
+    cout << "x in mainTest is = " << x << endl;
+    cout << "Address of x in mainTest is = " << &x << endl;
 
     // Address for variables should decrease
-    foo();
+    barFoo();
     
-    // foo's memory will be free. Hence, z should have higher address than the y in foo.
+    // barFoo's memory will be free. Hence, z should have higher address than the y in barFoo.
     // Closer to the address of x 
     z = 10;
-    cout << "z in main is = " << z << endl;
-    cout << "Address of z in main is = " << &z << endl;
+    cout << "z in mainTest is = " << z << endl;
+    cout << "Address of z in mainTest is = " << &z << endl;
     return 0;
 }

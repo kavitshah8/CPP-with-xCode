@@ -1,6 +1,8 @@
 #include "../Cube.h"
 #include <iostream>
 
+namespace cube {
+
 bool sendCubeByValue(Cube cube)
 {
     std::cout << "Inside sendCube()" << std::endl;
@@ -36,7 +38,7 @@ Variables can be created by three ways
 In the same way, functions arguments and return type 
 */
 
-int main()
+int mainTestC()
 {
     // Custom constructor was called.
     Cube a;
@@ -65,7 +67,7 @@ int main()
     // No constructor will be called as we are passing a pointer to an instance
     sendCubeByPointer(&c); // Pass by pointer
 
-    // Copy ctor will be called as returned obj from bar has to be copied onto main's stack frame
+    // Copy ctor will be called as returned obj from bar has to be copied onto mainTest's stack frame
     // Ideally, one, copy, copy ctor should be called
     // Note: some how it does not call copy ???
     // Answer: https://www.reddit.com/r/cpp_questions/comments/fgwhxk/stack_vs_heap_clarification/fk7mnwm/
@@ -73,4 +75,5 @@ int main()
     Cube i = bar();
 
     return 0;
-}
+};
+};

@@ -39,7 +39,7 @@ std::ostream& operator<<(std::ostream& os, Gender c)
     return os;
 }
  
-int main() {
+int mainEnum() {
     
     Gender g = Gender::Male;
     std::cout << (g == Gender::Male) << std::endl;

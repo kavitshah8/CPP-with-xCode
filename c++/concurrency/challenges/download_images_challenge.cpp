@@ -70,7 +70,7 @@ size_t write_callback(void *contents, size_t size, size_t nmemb, void *userp) {
     return size * nmemb;
 }
 
-int main() {
+void mainDownload() {
     const int NUM_EVAL_RUNS = 3;
     const int NUM_IMAGES = 50;
 

@@ -57,7 +57,7 @@ void parallel_matrix_multiply(long ** A, size_t num_rows_a, size_t num_cols_a,
     }
 }
 
-int main() {
+void mainMaitrix() {
     const int NUM_EVAL_RUNS = 3;
     const size_t NUM_ROWS_A = 1000;
     const size_t NUM_COLS_A = 1000;

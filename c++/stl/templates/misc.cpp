@@ -12,7 +12,7 @@ T max(T a, T b) { // function template
     return a > b ? a : b;
 }
 
-int main() {
+void mainMisc() {
     int a = 50, b = 6;
     const char* c = "C", *d = "D";
     // std::cout << "Max is = " << max<int> (a, b) << std::endl;

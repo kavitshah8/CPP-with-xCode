@@ -1,6 +1,8 @@
 #include "../Cube.h"
 #include <iostream>
 
+namespace ctorDtor{
+
 bool create_cube_on_stack() {
     Cube c;
     std::cout << "returning from create_cube_on_stack()"<< std::endl;
@@ -18,8 +20,9 @@ bool create_cube_on_heap() {
     return true;
 }
 
-int main() {
+int mainCtor() {
     // create_cube_on_heap();
     create_cube_on_stack();
     return 0;
 }
+};

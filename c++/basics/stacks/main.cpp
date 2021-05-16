@@ -1,7 +1,7 @@
 #include <iostream>
 #include <stack>
 
-int main() {
+int mainStacks() {
     std::stack<int> s;
     s.push(0);
     s.push(10);

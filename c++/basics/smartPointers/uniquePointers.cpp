@@ -11,16 +11,16 @@ class Entity {
     {
         std::cout << "Entity dtor called." << std::endl;
     }
-    void foo(){}
+    void fooPointer(){}
 };
 
-int main()
+int mainUnique()
 {
     
     {
-        std::unique_ptr<Entity> ptr(new Entity());
+//        std::unique_ptr<Entity> ptr(new Entity());
 
     }
-    std::cout << "Inside main" << std::endl;
+    std::cout << "Inside mainTest" << std::endl;
     return 0;
 }

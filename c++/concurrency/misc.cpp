@@ -18,7 +18,7 @@ int threadMain()
     cout << "after" <<endl;
     return ret;
 }
-int main()
+int mainMiscConc()
 {
     std::thread t1(threadMain);
     int i = 0;

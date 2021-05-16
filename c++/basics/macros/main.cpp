@@ -5,7 +5,7 @@
     std::cout << #exp << std::endl; \
 } \
 
-int main () {
+int mainTestMacro () {
     NAME("Kavit");
     return 0;
 }

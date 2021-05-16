@@ -2,7 +2,7 @@
 #include <map>
 
 // To compile: g++ map.cpp -std=c++11
-int main() {
+void mainFind() {
     // std::map::find()
     std::map<char,int> mymap;
     char c;

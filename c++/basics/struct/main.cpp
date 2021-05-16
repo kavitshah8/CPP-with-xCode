@@ -6,7 +6,7 @@ struct AnalyticsName
     std::string amazonAnalytics;
 };
 
-int main()
+int mainStruct()
 {
     // Note the it assigns values based in order
     AnalyticsName Application = {"g_application", "a_application"};

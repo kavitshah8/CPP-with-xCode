@@ -21,7 +21,7 @@ void worker()
     }
 }
 
-int main()
+int mainDataRace()
 {
     // Creating vector of threads for fun
     std::vector<std::thread> threadPool;

@@ -2,7 +2,7 @@
 #include <map>
 
 // To compile: g++ map.cpp -std=c++11
-int main() {
+int mainMap() {
     // Map Inititalizations
     // std::map<int, int> intMap { ... } also works
     std::map<int, int> intMap = {

@@ -1,8 +1,8 @@
 #include <iostream>
-#include "basics/templates/2_class_template.cpp"
+// #include "stl/containers/sequence/vector.cpp"
 
 
 int main() {
-    classTemplate::runner();
+    // vector::runner();
     return 0;
 }
