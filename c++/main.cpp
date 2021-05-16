@@ -3,7 +3,7 @@
 
 
 int main() {
-    // vector::runner();
+    vectorIterations();
     vectorBasics();
     return 0;
 }

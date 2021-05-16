@@ -1,21 +1,60 @@
 #include <iostream>
 #include <vector>
+using namespace std;
+
+void vectorIterations() {
+    std::vector<int> v = {7, 5, 16, 8};
+    
+    // Three ways of iterating over vector 
+    // 1. like an array
+    for (size_t i = 0; i < v.size(); i++)
+    {
+        cout << "v["<<i << "] = " <<  v[i] << endl;
+    }
+    
+    // 2. Recommended way of iterating a vector
+    // - Faster & works on all the sequence containers
+    for_each(v.begin(), v.end(), [](int i) {
+        std::cout << i << std::endl;
+    });
+    
+    // 3. Since c++11
+    for(int it : v) {
+        // Copy of each item in the vector
+        cout << it << '\n';
+    }
+    for (int& it: v) {
+        // Real reference to each item in the vector
+        it = 10; 
+    }
  
+    for_each(v.begin(), v.end(), [](int i) {
+        std::cout << i << std::endl;
+    });
+
+}
+
 void vectorBasics()
 {
     // Create a vector containing integers
-    std::vector<int> v ;
-    
-    std::cout << v.size() << std::endl;
+    vector<int> v; // vec.size() == 0
     
     // Add integers to vector<int>
-    // std::vector<int> v = {7, 5, 16, 8};
+    // vector<int> v = {7, 5, 16, 8};
  
-    v.push_back(25);
-    v.push_back(13);
- 
-    // Iterate and print values of vector
-    for(int n : v) {
-        std::cout << n << '\n';
-    }
+    v.push_back(7);
+    v.push_back(5);
+    v.push_back(16);
+    v.push_back(8); // vec.size() == 4
+
+    // Random accessing vector elements
+    cout << v[2] << endl;    // No Range Check
+    cout << v.at(2) << endl; // throws range_error exception of out of scope range
+    
+
+    // Vector is a dynamically allocated CONTIGUOUS array in a memory
+    // Hence, you can access it like an array
+    int *p = &v[0];
+    p[3] = 60;
+    cout << v.at(3) << endl;
 }

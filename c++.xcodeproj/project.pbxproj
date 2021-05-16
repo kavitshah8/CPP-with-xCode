@@ -14,7 +14,6 @@
 		CFE810312650CAFE00114D6D /* mapFind.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFE810282650CAFE00114D6D /* mapFind.cpp */; };
 		CFE810322650CAFE00114D6D /* mapIteration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFE810292650CAFE00114D6D /* mapIteration.cpp */; };
 		CFE810332650CAFE00114D6D /* vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFE8102B2650CAFE00114D6D /* vector.cpp */; };
-		CFE810342650CAFE00114D6D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFE8102D2650CAFE00114D6D /* main.cpp */; };
 		CFE8103B2650CCDD00114D6D /* headers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFE8103A2650CCDD00114D6D /* headers.cpp */; };
 		CFE8107E2650CCF600114D6D /* strings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFE8103F2650CCF600114D6D /* strings.cpp */; };
 		CFE8107F2650CCF600114D6D /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = CFE810412650CCF600114D6D /* Makefile */; };
@@ -83,8 +82,6 @@
 		CFE810282650CAFE00114D6D /* mapFind.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mapFind.cpp; sourceTree = "<group>"; };
 		CFE810292650CAFE00114D6D /* mapIteration.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mapIteration.cpp; sourceTree = "<group>"; };
 		CFE8102B2650CAFE00114D6D /* vector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vector.cpp; sourceTree = "<group>"; };
-		CFE8102C2650CAFE00114D6D /* a.out */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = a.out; sourceTree = "<group>"; };
-		CFE8102D2650CAFE00114D6D /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		CFE8103A2650CCDD00114D6D /* headers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = headers.cpp; sourceTree = "<group>"; };
 		CFE8103F2650CCF600114D6D /* strings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = strings.cpp; sourceTree = "<group>"; };
 		CFE810412650CCF600114D6D /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
@@ -217,8 +214,6 @@
 			isa = PBXGroup;
 			children = (
 				CFE8102B2650CAFE00114D6D /* vector.cpp */,
-				CFE8102C2650CAFE00114D6D /* a.out */,
-				CFE8102D2650CAFE00114D6D /* main.cpp */,
 			);
 			path = sequence;
 			sourceTree = "<group>";
@@ -604,7 +599,6 @@
 				CFE810872650CCF600114D6D /* main.cpp in Sources */,
 				CFE8108D2650CCF600114D6D /* main.cpp in Sources */,
 				CFE810812650CCF600114D6D /* main.cpp in Sources */,
-				CFE810342650CAFE00114D6D /* main.cpp in Sources */,
 				CFE810852650CCF600114D6D /* pointers.cpp in Sources */,
 				CFE810822650CCF600114D6D /* Makefile in Sources */,
 				CFE810882650CCF600114D6D /* main.cpp in Sources */,
