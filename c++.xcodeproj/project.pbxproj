@@ -59,6 +59,7 @@
 		CFE810BC2650CD1A00114D6D /* 2_detachedThreads.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFE810AE2650CD1A00114D6D /* 2_detachedThreads.cpp */; };
 		CFE810D12652AE9F00114D6D /* deque.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFE810CF2652AE9F00114D6D /* deque.cpp */; };
 		CFE810D52652B6C800114D6D /* list.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFE810D32652B6C800114D6D /* list.cpp */; };
+		CFE810D92652BF1500114D6D /* array.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFE810D72652BF1500114D6D /* array.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -137,6 +138,8 @@
 		CFE810D02652AE9F00114D6D /* deque.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = deque.hpp; sourceTree = "<group>"; };
 		CFE810D32652B6C800114D6D /* list.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = list.cpp; sourceTree = "<group>"; };
 		CFE810D42652B6C800114D6D /* list.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = list.hpp; sourceTree = "<group>"; };
+		CFE810D72652BF1500114D6D /* array.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = array.cpp; sourceTree = "<group>"; };
+		CFE810D82652BF1500114D6D /* array.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = array.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +228,8 @@
 				CFE810D02652AE9F00114D6D /* deque.hpp */,
 				CFE810D32652B6C800114D6D /* list.cpp */,
 				CFE810D42652B6C800114D6D /* list.hpp */,
+				CFE810D72652BF1500114D6D /* array.cpp */,
+				CFE810D82652BF1500114D6D /* array.hpp */,
 			);
 			path = sequence;
 			sourceTree = "<group>";
@@ -564,6 +569,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFE810B22650CD1A00114D6D /* lock_vs_try_lock.cpp in Sources */,
+				CFE810D92652BF1500114D6D /* array.cpp in Sources */,
 				CFBC362E259323E700C965C0 /* main.cpp in Sources */,
 				CFE8102E2650CAFE00114D6D /* misc.cpp in Sources */,
 				CFE810BA2650CD1A00114D6D /* 1_threadStates.cpp in Sources */,

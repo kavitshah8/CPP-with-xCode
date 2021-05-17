@@ -15,6 +15,7 @@ using namespace std;
 
 /**
  * list is basically a doubly linked list
+ * forward_list is a singly linked list
  * Properties:
  * 1. Insert and remove at begin, middle, end takes O(1) time
  * 2. Searching an element takes                    O(n) time

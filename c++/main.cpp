@@ -1,7 +1,8 @@
 #include <iostream>
-#include "stl/containers/sequence/list.hpp"
+#include "stl/containers/sequence/array.hpp"
 
 int main() {
-    listBasics();
+//    listBasics();
+    stlArray();
     return 0;
 }
