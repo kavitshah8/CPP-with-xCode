@@ -1,9 +1,9 @@
 #include <iostream>
-#include "stl/containers/sequence/vector.h"
+#include "stl/containers/sequence/deque.hpp"
 
 int main() {
-    vectorIterations();
-    vectorBasics();
-    commonAPI();
+//    vectorIterations();
+//    vectorBasics();
+    dequeBasics();
     return 0;
 }

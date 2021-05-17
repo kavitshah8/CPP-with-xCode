@@ -57,6 +57,7 @@
 		CFE810BA2650CD1A00114D6D /* 1_threadStates.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFE810AC2650CD1A00114D6D /* 1_threadStates.cpp */; };
 		CFE810BB2650CD1A00114D6D /* schedulingThreads.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFE810AD2650CD1A00114D6D /* schedulingThreads.cpp */; };
 		CFE810BC2650CD1A00114D6D /* 2_detachedThreads.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFE810AE2650CD1A00114D6D /* 2_detachedThreads.cpp */; };
+		CFE810D12652AE9F00114D6D /* deque.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFE810CF2652AE9F00114D6D /* deque.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -131,6 +132,8 @@
 		CFE810AE2650CD1A00114D6D /* 2_detachedThreads.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = 2_detachedThreads.cpp; sourceTree = "<group>"; };
 		CFE810C72650FC2A00114D6D /* headers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = headers.h; sourceTree = "<group>"; };
 		CFE810CC2650FCE000114D6D /* vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vector.h; sourceTree = "<group>"; };
+		CFE810CF2652AE9F00114D6D /* deque.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = deque.cpp; sourceTree = "<group>"; };
+		CFE810D02652AE9F00114D6D /* deque.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = deque.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +218,8 @@
 			children = (
 				CFE810CC2650FCE000114D6D /* vector.h */,
 				CFE8102B2650CAFE00114D6D /* vector.cpp */,
+				CFE810CF2652AE9F00114D6D /* deque.cpp */,
+				CFE810D02652AE9F00114D6D /* deque.hpp */,
 			);
 			path = sequence;
 			sourceTree = "<group>";
@@ -560,6 +565,7 @@
 				CFE810982650CCF600114D6D /* main.cpp in Sources */,
 				CFE8108F2650CCF600114D6D /* main.cpp in Sources */,
 				CFE810942650CCF600114D6D /* Student.cpp in Sources */,
+				CFE810D12652AE9F00114D6D /* deque.cpp in Sources */,
 				CFE810802650CCF600114D6D /* main.cpp in Sources */,
 				CFE810B52650CD1A00114D6D /* merge_sort_challenge.cpp in Sources */,
 				CFE810B02650CD1A00114D6D /* processVsThread.cpp in Sources */,

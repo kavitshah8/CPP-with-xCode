@@ -2,23 +2,17 @@
 #include <vector>
 using namespace std;
 
+
 /**
- * All three container types have below common APIs
+    -----------------
+    |   |   |   |   | ---->
+    -----------------
+ * Properties of vector
+ * 0. Vector can grow only at the end of the vector
+ * 1. Insert/remove at the end takes                        O(1) time
+ * 2. Insert/remove at the begining and in the middle takes O(n) time
+ * 3. Searching an element takes                            O(n) time
  */
-void commonAPI() {
-    vector<int> common = {4, 5, 6, 7};
-    // copy ctor
-    vector<int> commonCopy(common);
-
-    commonCopy.clear();
-
-    common.swap(commonCopy);
-
-    cout << commonCopy.size() << endl;
-    cout << commonCopy.empty() << endl;
-    
-}
-
 void vectorIterations() {
     vector<int> v = {7, 5, 16, 8};
     
@@ -65,6 +59,7 @@ void vectorBasics()
     v.push_back(8); // vec.size() == 4
 
     // Random accessing vector elements
+    // It's possible because vector provides contiguous memory allocation
     cout << v[2] << endl;    // No Range Check
     cout << v.at(2) << endl; // throws range_error exception of out of scope range
     
@@ -74,4 +69,21 @@ void vectorBasics()
     int *p = &v[0];
     p[3] = 60;
     cout << v.at(3) << endl;
+}
+
+/**
+ * All three container types have below common APIs
+ */
+void commonAPI() {
+    vector<int> common = {4, 5, 6, 7};
+    // copy ctor
+    vector<int> commonCopy(common);
+
+    commonCopy.clear();
+
+    common.swap(commonCopy);
+
+    cout << commonCopy.size() << endl;
+    cout << commonCopy.empty() << endl;
+    
 }
