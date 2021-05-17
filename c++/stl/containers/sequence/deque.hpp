@@ -12,9 +12,9 @@
 #include <deque>
 using namespace std;
 /**
-        -----------------
+      --------------------
    <--- |   |   |   |   | --->
-        -----------------
+      --------------------
  * Properties of deque
  * 0. Vector can grow at the begining and end 
  * 1. Insert/remove at the begining and end takes O(1) time
