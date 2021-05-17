@@ -1,7 +1,7 @@
 #include <iostream>
-#include "stl/containers/sequence/deque.hpp"
+#include "stl/containers/sequence/list.hpp"
 
 int main() {
-    dequeBasics();
+    listBasics();
     return 0;
 }

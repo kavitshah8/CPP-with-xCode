@@ -58,6 +58,7 @@
 		CFE810BB2650CD1A00114D6D /* schedulingThreads.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFE810AD2650CD1A00114D6D /* schedulingThreads.cpp */; };
 		CFE810BC2650CD1A00114D6D /* 2_detachedThreads.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFE810AE2650CD1A00114D6D /* 2_detachedThreads.cpp */; };
 		CFE810D12652AE9F00114D6D /* deque.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFE810CF2652AE9F00114D6D /* deque.cpp */; };
+		CFE810D52652B6C800114D6D /* list.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFE810D32652B6C800114D6D /* list.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -134,6 +135,8 @@
 		CFE810CC2650FCE000114D6D /* vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vector.h; sourceTree = "<group>"; };
 		CFE810CF2652AE9F00114D6D /* deque.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = deque.cpp; sourceTree = "<group>"; };
 		CFE810D02652AE9F00114D6D /* deque.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = deque.hpp; sourceTree = "<group>"; };
+		CFE810D32652B6C800114D6D /* list.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = list.cpp; sourceTree = "<group>"; };
+		CFE810D42652B6C800114D6D /* list.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = list.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +223,8 @@
 				CFE8102B2650CAFE00114D6D /* vector.cpp */,
 				CFE810CF2652AE9F00114D6D /* deque.cpp */,
 				CFE810D02652AE9F00114D6D /* deque.hpp */,
+				CFE810D32652B6C800114D6D /* list.cpp */,
+				CFE810D42652B6C800114D6D /* list.hpp */,
 			);
 			path = sequence;
 			sourceTree = "<group>";
@@ -579,6 +584,7 @@
 				CFE810902650CCF600114D6D /* lambdaCaptureList.cpp in Sources */,
 				CFE8108C2650CCF600114D6D /* Makefile in Sources */,
 				CFE810BB2650CD1A00114D6D /* schedulingThreads.cpp in Sources */,
+				CFE810D52652B6C800114D6D /* list.cpp in Sources */,
 				CFE8109D2650CCF600114D6D /* main.cpp in Sources */,
 				CFE810312650CAFE00114D6D /* mapFind.cpp in Sources */,
 				CFE8108B2650CCF600114D6D /* main.cpp in Sources */,
