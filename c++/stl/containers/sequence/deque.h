@@ -13,13 +13,13 @@
 using namespace std;
 /**
         -----------------
-    <---|   |   |   |   | --->
+   <--- |   |   |   |   | --->
         -----------------
  * Properties of deque
  * 0. Vector can grow at the begining and end 
- * 1. Insert/remove at the begining and end                 O(1) time
- * 2. Insert/remove in the middle takes                     O(n) time
- * 3. Searching an element takes                            O(n) time
+ * 1. Insert/remove at the begining and end takes O(1) time
+ * 2. Insert/remove in the middle takes           O(n) time
+ * 3. Searching an element takes                  O(n) time
  */
 
 void dequeBasics()

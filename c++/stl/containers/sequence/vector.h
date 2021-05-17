@@ -2,10 +2,9 @@
 #include <vector>
 using namespace std;
 
-
 /**
     -----------------
-    |   |   |   |   | ---->
+    |   |   |   |   | --->
     -----------------
  * Properties of vector
  * 0. Vector can grow only at the end of the vector
