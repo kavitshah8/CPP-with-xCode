@@ -45,6 +45,8 @@ int mainMap() {
         std::cout << iterator->first << "\t" << iterator->second << std::endl;
     }
 
+    // when you don't need a reference to the iterator
+    // when you are only interested in the copy of the element
     for_each(intMap.begin(), intMap.end(), [](auto pair) {
         cout << pair.first << "=" << pair.second << endl;
     });
