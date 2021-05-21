@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF2484BE265759A20072D867 /* map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF2484BC265759A20072D867 /* map.cpp */; };
 		CFBC362E259323E700C965C0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFBC362D259323E700C965C0 /* main.cpp */; };
+		CFE501D62654B28E002A2B5E /* set.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFE501D42654B28E002A2B5E /* set.cpp */; };
+		CFE501DB2654BBEF002A2B5E /* map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFE501D92654BBEF002A2B5E /* map.cpp */; };
 		CFE8102E2650CAFE00114D6D /* misc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFE810212650CAFE00114D6D /* misc.cpp */; };
 		CFE8102F2650CAFE00114D6D /* 1_function_template.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFE810222650CAFE00114D6D /* 1_function_template.cpp */; };
 		CFE810302650CAFE00114D6D /* 2_class_template.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFE810232650CAFE00114D6D /* 2_class_template.cpp */; };
@@ -75,8 +78,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CF2484BC265759A20072D867 /* map.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = map.cpp; sourceTree = "<group>"; };
+		CF2484BD265759A20072D867 /* map.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = map.hpp; sourceTree = "<group>"; };
 		CFBC362A259323E700C965C0 /* c++ */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "c++"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFBC362D259323E700C965C0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		CFE501D42654B28E002A2B5E /* set.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = set.cpp; sourceTree = "<group>"; };
+		CFE501D52654B28E002A2B5E /* set.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = set.hpp; sourceTree = "<group>"; };
+		CFE501D92654BBEF002A2B5E /* map.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = map.cpp; sourceTree = "<group>"; };
+		CFE501DA2654BBEF002A2B5E /* map.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = map.hpp; sourceTree = "<group>"; };
 		CFE810212650CAFE00114D6D /* misc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = misc.cpp; sourceTree = "<group>"; };
 		CFE810222650CAFE00114D6D /* 1_function_template.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = 1_function_template.cpp; sourceTree = "<group>"; };
 		CFE810232650CAFE00114D6D /* 2_class_template.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = 2_class_template.cpp; sourceTree = "<group>"; };
@@ -153,6 +162,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF2484B8265758790072D867 /* unordered */ = {
+			isa = PBXGroup;
+			children = (
+				CF2484BC265759A20072D867 /* map.cpp */,
+				CF2484BD265759A20072D867 /* map.hpp */,
+			);
+			path = unordered;
+			sourceTree = "<group>";
+		};
 		CFBC3621259323E700C965C0 = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +198,17 @@
 			path = "c++";
 			sourceTree = "<group>";
 		};
+		CFE501D32654B273002A2B5E /* associative */ = {
+			isa = PBXGroup;
+			children = (
+				CFE501D42654B28E002A2B5E /* set.cpp */,
+				CFE501D52654B28E002A2B5E /* set.hpp */,
+				CFE501D92654BBEF002A2B5E /* map.cpp */,
+				CFE501DA2654BBEF002A2B5E /* map.hpp */,
+			);
+			path = associative;
+			sourceTree = "<group>";
+		};
 		CFE8101F2650CAFE00114D6D /* stl */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +232,8 @@
 		CFE810242650CAFE00114D6D /* containers */ = {
 			isa = PBXGroup;
 			children = (
+				CF2484B8265758790072D867 /* unordered */,
+				CFE501D32654B273002A2B5E /* associative */,
 				CFE810262650CAFE00114D6D /* README.md */,
 				CFE810272650CAFE00114D6D /* map */,
 				CFE8102A2650CAFE00114D6D /* sequence */,
@@ -596,6 +627,7 @@
 				CFE8108B2650CCF600114D6D /* main.cpp in Sources */,
 				CFE8107E2650CCF600114D6D /* strings.cpp in Sources */,
 				CFE810B32650CD1A00114D6D /* detachedThread.cpp in Sources */,
+				CFE501DB2654BBEF002A2B5E /* map.cpp in Sources */,
 				CFE810932650CCF600114D6D /* howNotToWriteComments.c in Sources */,
 				CFE810B92650CD1A00114D6D /* 3_dataRace.cpp in Sources */,
 				CFE8109B2650CCF600114D6D /* rpn.cpp in Sources */,
@@ -604,6 +636,8 @@
 				CFE810992650CCF600114D6D /* Cube.cpp in Sources */,
 				CFE8102F2650CAFE00114D6D /* 1_function_template.cpp in Sources */,
 				CFE810972650CCF600114D6D /* main.cpp in Sources */,
+				CFE501D62654B28E002A2B5E /* set.cpp in Sources */,
+				CF2484BE265759A20072D867 /* map.cpp in Sources */,
 				CFE810B62650CD1A00114D6D /* download_images_challenge.cpp in Sources */,
 				CFE810832650CCF600114D6D /* main.cpp in Sources */,
 				CFE8108A2650CCF600114D6D /* uniquePointers.cpp in Sources */,

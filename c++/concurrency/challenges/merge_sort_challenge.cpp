@@ -2,7 +2,7 @@
  * Challenge: Sort an array of random integers with merge sort
  */
 #include <thread>
-
+#include <math.h>
 /* declaration of merge helper function */
 void merge(int * array, unsigned int left, unsigned int mid, unsigned int right);
 

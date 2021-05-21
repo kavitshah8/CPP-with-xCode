@@ -1,8 +1,11 @@
 #include <iostream>
-#include "stl/containers/sequence/array.hpp"
+#include "stl/containers/unordered/map.hpp"
 
 int main() {
-//    listBasics();
-    stlArray();
+    basicsUnorderedMap();
+    basicsOfUnorderedSet();
+    HashTableAPIs();
+    gotchaWithMap();
+    
     return 0;
 }

@@ -12,7 +12,7 @@
 #include <deque>
 using namespace std;
 /**
-      --------------------
+      - -------------------
    <--- |   |   |   |   | --->
       --------------------
  * Properties of deque

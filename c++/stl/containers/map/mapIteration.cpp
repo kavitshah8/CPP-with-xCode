@@ -1,6 +1,7 @@
 #include <iostream>
 #include <map>
 
+using namespace std;
 // To compile: g++ map.cpp -std=c++11
 int mainMap() {
     // Map Inititalizations
@@ -43,5 +44,9 @@ int mainMap() {
     for (iterator = intMultiMap.begin(); iterator != intMultiMap.end(); iterator++) {
         std::cout << iterator->first << "\t" << iterator->second << std::endl;
     }
+
+    for_each(intMap.begin(), intMap.end(), [](auto pair) {
+        cout << pair.first << "=" << pair.second << endl;
+    });
     return 0;
 }
