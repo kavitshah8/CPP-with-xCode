@@ -1,11 +1,9 @@
 #include <iostream>
-#include "stl/containers/unordered/map.hpp"
+#include "stl/functors.hpp"
 
 int main() {
-    basicsUnorderedMap();
-    basicsOfUnorderedSet();
-    HashTableAPIs();
-    gotchaWithMap();
-    
+
+//    basicFunctors();
+    parameterizedFunctions();
     return 0;
 }

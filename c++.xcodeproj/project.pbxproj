@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CF2484BE265759A20072D867 /* map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF2484BC265759A20072D867 /* map.cpp */; };
+		CF2484C226586BD80072D867 /* algorithms.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF2484C026586BD80072D867 /* algorithms.cpp */; };
+		CF2484C5265985C70072D867 /* functors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF2484C3265985C70072D867 /* functors.cpp */; };
 		CFBC362E259323E700C965C0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFBC362D259323E700C965C0 /* main.cpp */; };
 		CFE501D62654B28E002A2B5E /* set.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFE501D42654B28E002A2B5E /* set.cpp */; };
 		CFE501DB2654BBEF002A2B5E /* map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFE501D92654BBEF002A2B5E /* map.cpp */; };
@@ -80,6 +82,10 @@
 /* Begin PBXFileReference section */
 		CF2484BC265759A20072D867 /* map.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = map.cpp; sourceTree = "<group>"; };
 		CF2484BD265759A20072D867 /* map.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = map.hpp; sourceTree = "<group>"; };
+		CF2484C026586BD80072D867 /* algorithms.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = algorithms.cpp; sourceTree = "<group>"; };
+		CF2484C126586BD80072D867 /* algorithms.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = algorithms.hpp; sourceTree = "<group>"; };
+		CF2484C3265985C70072D867 /* functors.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = functors.cpp; sourceTree = "<group>"; };
+		CF2484C4265985C70072D867 /* functors.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = functors.hpp; sourceTree = "<group>"; };
 		CFBC362A259323E700C965C0 /* c++ */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "c++"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFBC362D259323E700C965C0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		CFE501D42654B28E002A2B5E /* set.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = set.cpp; sourceTree = "<group>"; };
@@ -171,6 +177,15 @@
 			path = unordered;
 			sourceTree = "<group>";
 		};
+		CF2484BF26586BC80072D867 /* algorithms */ = {
+			isa = PBXGroup;
+			children = (
+				CF2484C026586BD80072D867 /* algorithms.cpp */,
+				CF2484C126586BD80072D867 /* algorithms.hpp */,
+			);
+			path = algorithms;
+			sourceTree = "<group>";
+		};
 		CFBC3621259323E700C965C0 = {
 			isa = PBXGroup;
 			children = (
@@ -212,9 +227,12 @@
 		CFE8101F2650CAFE00114D6D /* stl */ = {
 			isa = PBXGroup;
 			children = (
+				CF2484BF26586BC80072D867 /* algorithms */,
 				CFE810C72650FC2A00114D6D /* headers.h */,
 				CFE810202650CAFE00114D6D /* templates */,
 				CFE810242650CAFE00114D6D /* containers */,
+				CF2484C3265985C70072D867 /* functors.cpp */,
+				CF2484C4265985C70072D867 /* functors.hpp */,
 			);
 			path = stl;
 			sourceTree = "<group>";
@@ -614,6 +632,7 @@
 				CFE810322650CAFE00114D6D /* mapIteration.cpp in Sources */,
 				CFE810912650CCF600114D6D /* lamda.cpp in Sources */,
 				CFE8107F2650CCF600114D6D /* Makefile in Sources */,
+				CF2484C5265985C70072D867 /* functors.cpp in Sources */,
 				CFE810922650CCF600114D6D /* array.cpp in Sources */,
 				CFE810842650CCF600114D6D /* conversion.cpp in Sources */,
 				CFE810B42650CD1A00114D6D /* misc.cpp in Sources */,
@@ -649,6 +668,7 @@
 				CFE810B12650CD1A00114D6D /* conditional_variables.cpp in Sources */,
 				CFE810B82650CD1A00114D6D /* threadEndsWithItsTask.cpp in Sources */,
 				CFE810872650CCF600114D6D /* main.cpp in Sources */,
+				CF2484C226586BD80072D867 /* algorithms.cpp in Sources */,
 				CFE8108D2650CCF600114D6D /* main.cpp in Sources */,
 				CFE810812650CCF600114D6D /* main.cpp in Sources */,
 				CFE810852650CCF600114D6D /* pointers.cpp in Sources */,

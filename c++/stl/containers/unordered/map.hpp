@@ -73,7 +73,7 @@ void basicsUnorderedMap()
 
 void iterteMap(const unordered_map<char, int> &myMap)
 {
-    myMap['a'] = 100;
+//    myMap['a'] = 100;
     
     for_each(myMap.begin(), myMap.end(), [](auto item){
         cout << item.first << item.second << endl;
