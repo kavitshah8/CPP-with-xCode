@@ -4,6 +4,10 @@
 int main() {
 
 //    basicFunctors();
-    parameterizedFunctions();
+//    parameterizedFunctions();
+//    parameterBinding();
+//    bind();
+//    needForFunctorsInSTL();
+    algo();
     return 0;
 }

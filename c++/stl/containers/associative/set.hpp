@@ -14,7 +14,8 @@
 using namespace std;
 
 /**
- * Always sorted, implemented using Binary Trees
+ * Always sorted
+ * Implemented using Red Black Trees
  * Insertion                              : O(log(n)), can be reduced to O(1)
  * Searching / Erasing             : O(log(n))
  * Traversing                            :  Slow
