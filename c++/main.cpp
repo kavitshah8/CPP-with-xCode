@@ -1,8 +1,7 @@
 #include <iostream>
 
-#include "callbacks.hpp"
-
+#include "callable_objects.hpp"
 int main() {
-    cbRunner();
+    callableRunner();
     return 0;
 }

@@ -18,6 +18,13 @@ auto callback = [](){
 void asyncFunction(std::function<void(void)> fp)
 {
     puts("Async function is called");
+
+    // Note: if you do
+    // std::async(std::launch::async, [&](){ .. }
+    // instead of
+    // std::future<void> fu = std::async(std::launch::async, [&](){ .. }
+    // then execution becomes sequential
+    
     std::future<void> fu = std::async(std::launch::async, [&](){
         std::this_thread::sleep_for(std::chrono::seconds(10));
         auto t = std::this_thread::get_id();
