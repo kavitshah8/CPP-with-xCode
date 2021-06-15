@@ -9,8 +9,6 @@
 #define algorithms_hpp
 
 #include <stdio.h>
-#include <algorithm>
-#include <vector>
 
 #include "utils.hpp"
 

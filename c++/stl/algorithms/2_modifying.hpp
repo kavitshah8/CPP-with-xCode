@@ -8,11 +8,8 @@
 #ifndef __modifying_hpp
 #define __modifying_hpp
 
-#include <stdio.h>
-#include <vector>
-#include <algorithm>
+#include "utils.hpp"
 
-#include "../../utils/utils.hpp"
 using namespace std;
 
 //* https://www.youtube.com/watch?v=kYYm-Quj97o

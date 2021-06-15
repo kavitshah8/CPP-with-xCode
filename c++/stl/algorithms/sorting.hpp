@@ -8,8 +8,6 @@
 #ifndef sorting_hpp
 #define sorting_hpp
 
-#include <stdio.h>
-#include <vector>
 #include "utils.hpp"
 
 // https://youtu.be/TZv5qHU2AMQ
