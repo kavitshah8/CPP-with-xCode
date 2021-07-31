@@ -28,7 +28,7 @@ public:
     // ctor
     Functor()
     {
-        cout << "ctor is called" << endl;
+        cout << "ctor is called " << endl;
     }
     
     // ctor
@@ -37,12 +37,16 @@ public:
         cout << "ctor with one argument " << i << endl;
     }
 
+    void twoParam (int x, std::string s)
+    {
+        cout << "x = " << x << "\n" << "s = " << s << endl;
+    }
     // Do not confuse with type conversion
     // Type comes after operator keyword
     // operator string () const { return "c"};
     void operator()(string s)
     {
-        cout << "Functor called with " << s << endl;
+        cout << "Functor called with " << s << "\n" << endl;
     }
 };
 

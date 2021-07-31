@@ -6,13 +6,20 @@
 //
 //
 #include "utils.hpp"
+
 using namespace std;
+
+void printMap(std::map<char, int> myMap) {
+    cout << "========================" << endl;
+    for (auto item: myMap)
+        cout << item.first << ":" << item.second << endl;
+    cout << "========================" << endl;
+}
 
 void printVec(vector<int> myVec) {
     cout << "========================" << endl;
-    for_each(myVec.begin(), myVec.end(), [](int i){
+    for (auto i : myVec)
         cout << i << endl;
-    });
     cout << "========================" << endl;
 }
 

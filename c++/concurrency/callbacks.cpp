@@ -25,12 +25,12 @@ void asyncFunction(std::function<void(void)> fp)
     // std::future<void> fu = std::async(std::launch::async, [&](){ .. }
     // then execution becomes sequential
     
-    std::future<void> fu = std::async(std::launch::async, [&](){
+//    std::future<void> fu = std::async(std::launch::async, [&](){
         std::this_thread::sleep_for(std::chrono::seconds(10));
         auto t = std::this_thread::get_id();
         printf("%d \n = ", t);
         fp();
-    });
+//    });
     puts("After launching a thread");
 }
 

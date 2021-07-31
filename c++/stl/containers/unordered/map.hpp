@@ -15,7 +15,16 @@
 
 using namespace std;
 
+
 /**
+
+            | map                            | unordered_map
+Implementation  | Red-Black Tree          | Hash Table
+search time        | log(n)                          | O(1) -> Average, O(n) -> Worst Case
+Insertion time     | log(n)                          | Same as search
+::lower_boud      | Yes                             | No
+::load_factor       | No                              | Yes
+
  * Properties of unordered containers
  * Fastest search/insert at any place  :  O(1) amortized
  * Associative containers take            : O(log(n)) gauranteed
@@ -71,14 +80,16 @@ void basicsUnorderedMap()
 
 }
 
-void iterteMap(const unordered_map<char, int> &myMap)
-{
-//    myMap['a'] = 100;
-    
-    for_each(myMap.begin(), myMap.end(), [](auto item){
-        cout << item.first << item.second << endl;
-    });
+void iterateMap(const unordered_map<char, int> &myMap)
+{ 
+    for (auto item : myMap) {
+        cout << item.first <<  "==" <<  item.second << endl;
+    }
+    // for_each(myMap.begin(), myMap.end(), [](auto item){
+    //     cout << item.first << item.second << endl;
+    // });
 }
+
 void gotchaWithMap()
 {
     unordered_map<char, int> myMap = {{'a', 1}, {'b', 2},{'c', 3}};
@@ -88,6 +99,8 @@ void gotchaWithMap()
     myMap['d'] = 4;
     myMap.insert(make_pair('e', 5));
     
-    iterteMap(myMap);
+//    printMap(myMap);
 }
+
+
 #endif /* map_hpp */
