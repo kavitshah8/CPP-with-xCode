@@ -5,7 +5,6 @@ class Student {
     void print();
     
     Student() : m_name("kavit"), m_age(2) {
-        std::cout << m_name << std::endl;
         print();
     }
 

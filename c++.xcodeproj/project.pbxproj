@@ -10,9 +10,18 @@
 		CF2484BE265759A20072D867 /* map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF2484BC265759A20072D867 /* map.cpp */; };
 		CF2484C226586BD80072D867 /* algorithms.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF2484C026586BD80072D867 /* algorithms.cpp */; };
 		CF2484C5265985C70072D867 /* functors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF2484C3265985C70072D867 /* functors.cpp */; };
+		CF7F75842665DC6D00F7BED1 /* utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF7F75822665DC6D00F7BED1 /* utils.cpp */; };
+		CF7F7587266680D300F7BED1 /* sorting.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF7F7585266680D300F7BED1 /* sorting.cpp */; };
+		CF7F758A2667311400F7BED1 /* 2_modifying.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF7F75882667311400F7BED1 /* 2_modifying.cpp */; };
+		CF7F758D2669825600F7BED1 /* sortedDataAlgorithms.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF7F758B2669825600F7BED1 /* sortedDataAlgorithms.cpp */; };
+		CFAA30F8267F88EC00DAB7FF /* 1_streams.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFAA30F6267F88EC00DAB7FF /* 1_streams.cpp */; };
 		CFBC362E259323E700C965C0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFBC362D259323E700C965C0 /* main.cpp */; };
+		CFE3048C26743275007ED1F0 /* async_future.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFE3048A26743275007ED1F0 /* async_future.cpp */; };
 		CFE501D62654B28E002A2B5E /* set.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFE501D42654B28E002A2B5E /* set.cpp */; };
 		CFE501DB2654BBEF002A2B5E /* map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFE501D92654BBEF002A2B5E /* map.cpp */; };
+		CFE6F13126794D9D004A99EE /* callbacks.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFE6F12F26794D9D004A99EE /* callbacks.cpp */; };
+		CFE6F135267963A2004A99EE /* callable_objects.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFE6F133267963A2004A99EE /* callable_objects.cpp */; };
+		CFE79E182665DADB00424962 /* nonModifying.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFE79E162665DADB00424962 /* nonModifying.cpp */; };
 		CFE8102E2650CAFE00114D6D /* misc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFE810212650CAFE00114D6D /* misc.cpp */; };
 		CFE8102F2650CAFE00114D6D /* 1_function_template.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFE810222650CAFE00114D6D /* 1_function_template.cpp */; };
 		CFE810302650CAFE00114D6D /* 2_class_template.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFE810232650CAFE00114D6D /* 2_class_template.cpp */; };
@@ -65,6 +74,7 @@
 		CFE810D12652AE9F00114D6D /* deque.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFE810CF2652AE9F00114D6D /* deque.cpp */; };
 		CFE810D52652B6C800114D6D /* list.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFE810D32652B6C800114D6D /* list.cpp */; };
 		CFE810D92652BF1500114D6D /* array.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFE810D72652BF1500114D6D /* array.cpp */; };
+		CFE87EAC26B5C717003C02D6 /* substrings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFE87EAA26B5C717003C02D6 /* substrings.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -86,12 +96,30 @@
 		CF2484C126586BD80072D867 /* algorithms.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = algorithms.hpp; sourceTree = "<group>"; };
 		CF2484C3265985C70072D867 /* functors.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = functors.cpp; sourceTree = "<group>"; };
 		CF2484C4265985C70072D867 /* functors.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = functors.hpp; sourceTree = "<group>"; };
+		CF7F75822665DC6D00F7BED1 /* utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = utils.cpp; sourceTree = "<group>"; };
+		CF7F75832665DC6D00F7BED1 /* utils.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = utils.hpp; sourceTree = "<group>"; };
+		CF7F7585266680D300F7BED1 /* sorting.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = sorting.cpp; sourceTree = "<group>"; };
+		CF7F7586266680D300F7BED1 /* sorting.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sorting.hpp; sourceTree = "<group>"; };
+		CF7F75882667311400F7BED1 /* 2_modifying.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 2_modifying.cpp; sourceTree = "<group>"; };
+		CF7F75892667311400F7BED1 /* 2_modifying.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = 2_modifying.hpp; sourceTree = "<group>"; };
+		CF7F758B2669825600F7BED1 /* sortedDataAlgorithms.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = sortedDataAlgorithms.cpp; sourceTree = "<group>"; };
+		CF7F758C2669825600F7BED1 /* sortedDataAlgorithms.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sortedDataAlgorithms.hpp; sourceTree = "<group>"; };
+		CFAA30F6267F88EC00DAB7FF /* 1_streams.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 1_streams.cpp; sourceTree = "<group>"; };
+		CFAA30F7267F88EC00DAB7FF /* 1_streams.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = 1_streams.hpp; sourceTree = "<group>"; };
 		CFBC362A259323E700C965C0 /* c++ */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "c++"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFBC362D259323E700C965C0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		CFE3048A26743275007ED1F0 /* async_future.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = async_future.cpp; sourceTree = "<group>"; };
+		CFE3048B26743275007ED1F0 /* async_future.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = async_future.hpp; sourceTree = "<group>"; };
 		CFE501D42654B28E002A2B5E /* set.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = set.cpp; sourceTree = "<group>"; };
 		CFE501D52654B28E002A2B5E /* set.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = set.hpp; sourceTree = "<group>"; };
 		CFE501D92654BBEF002A2B5E /* map.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = map.cpp; sourceTree = "<group>"; };
 		CFE501DA2654BBEF002A2B5E /* map.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = map.hpp; sourceTree = "<group>"; };
+		CFE6F12F26794D9D004A99EE /* callbacks.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = callbacks.cpp; sourceTree = "<group>"; };
+		CFE6F13026794D9D004A99EE /* callbacks.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = callbacks.hpp; sourceTree = "<group>"; };
+		CFE6F133267963A2004A99EE /* callable_objects.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = callable_objects.cpp; sourceTree = "<group>"; };
+		CFE6F134267963A2004A99EE /* callable_objects.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = callable_objects.hpp; sourceTree = "<group>"; };
+		CFE79E162665DADB00424962 /* nonModifying.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = nonModifying.cpp; sourceTree = "<group>"; };
+		CFE79E172665DADB00424962 /* nonModifying.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = nonModifying.hpp; sourceTree = "<group>"; };
 		CFE810212650CAFE00114D6D /* misc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = misc.cpp; sourceTree = "<group>"; };
 		CFE810222650CAFE00114D6D /* 1_function_template.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = 1_function_template.cpp; sourceTree = "<group>"; };
 		CFE810232650CAFE00114D6D /* 2_class_template.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = 2_class_template.cpp; sourceTree = "<group>"; };
@@ -155,6 +183,8 @@
 		CFE810D42652B6C800114D6D /* list.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = list.hpp; sourceTree = "<group>"; };
 		CFE810D72652BF1500114D6D /* array.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = array.cpp; sourceTree = "<group>"; };
 		CFE810D82652BF1500114D6D /* array.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = array.hpp; sourceTree = "<group>"; };
+		CFE87EAA26B5C717003C02D6 /* substrings.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = substrings.cpp; sourceTree = "<group>"; };
+		CFE87EAB26B5C717003C02D6 /* substrings.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = substrings.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,8 +212,42 @@
 			children = (
 				CF2484C026586BD80072D867 /* algorithms.cpp */,
 				CF2484C126586BD80072D867 /* algorithms.hpp */,
+				CFE79E162665DADB00424962 /* nonModifying.cpp */,
+				CFE79E172665DADB00424962 /* nonModifying.hpp */,
+				CF7F7585266680D300F7BED1 /* sorting.cpp */,
+				CF7F7586266680D300F7BED1 /* sorting.hpp */,
+				CF7F75882667311400F7BED1 /* 2_modifying.cpp */,
+				CF7F75892667311400F7BED1 /* 2_modifying.hpp */,
+				CF7F758B2669825600F7BED1 /* sortedDataAlgorithms.cpp */,
+				CF7F758C2669825600F7BED1 /* sortedDataAlgorithms.hpp */,
 			);
 			path = algorithms;
+			sourceTree = "<group>";
+		};
+		CF7F75812665DC5A00F7BED1 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				CF7F75822665DC6D00F7BED1 /* utils.cpp */,
+				CF7F75832665DC6D00F7BED1 /* utils.hpp */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		CFAA30F5267F82EF00DAB7FF /* Streams */ = {
+			isa = PBXGroup;
+			children = (
+				CFAA30F6267F88EC00DAB7FF /* 1_streams.cpp */,
+				CFAA30F7267F88EC00DAB7FF /* 1_streams.hpp */,
+			);
+			path = Streams;
+			sourceTree = "<group>";
+		};
+		CFAA30F9267F8C7700DAB7FF /* Bo */ = {
+			isa = PBXGroup;
+			children = (
+				CFAA30F5267F82EF00DAB7FF /* Streams */,
+			);
+			path = Bo;
 			sourceTree = "<group>";
 		};
 		CFBC3621259323E700C965C0 = {
@@ -205,6 +269,7 @@
 		CFBC362C259323E700C965C0 /* c++ */ = {
 			isa = PBXGroup;
 			children = (
+				CF7F75812665DC5A00F7BED1 /* utils */,
 				CFE8109F2650CD1A00114D6D /* concurrency */,
 				CFE8103D2650CCF600114D6D /* basics */,
 				CFE8101F2650CAFE00114D6D /* stl */,
@@ -224,9 +289,19 @@
 			path = associative;
 			sourceTree = "<group>";
 		};
+		CFE6F1322679638B004A99EE /* Bo */ = {
+			isa = PBXGroup;
+			children = (
+				CFE6F133267963A2004A99EE /* callable_objects.cpp */,
+				CFE6F134267963A2004A99EE /* callable_objects.hpp */,
+			);
+			path = Bo;
+			sourceTree = "<group>";
+		};
 		CFE8101F2650CAFE00114D6D /* stl */ = {
 			isa = PBXGroup;
 			children = (
+				CFAA30F9267F8C7700DAB7FF /* Bo */,
 				CF2484BF26586BC80072D867 /* algorithms */,
 				CFE810C72650FC2A00114D6D /* headers.h */,
 				CFE810202650CAFE00114D6D /* templates */,
@@ -286,6 +361,7 @@
 		CFE8103D2650CCF600114D6D /* basics */ = {
 			isa = PBXGroup;
 			children = (
+				CFE87EA926B5C6FB003C02D6 /* coding */,
 				CFE8103E2650CCF600114D6D /* strings */,
 				CFE810402650CCF600114D6D /* stacks */,
 				CFE810432650CCF600114D6D /* memory */,
@@ -535,6 +611,11 @@
 		CFE8109F2650CD1A00114D6D /* concurrency */ = {
 			isa = PBXGroup;
 			children = (
+				CFE6F1322679638B004A99EE /* Bo */,
+				CFE3048A26743275007ED1F0 /* async_future.cpp */,
+				CFE3048B26743275007ED1F0 /* async_future.hpp */,
+				CFE6F13026794D9D004A99EE /* callbacks.hpp */,
+				CFE6F12F26794D9D004A99EE /* callbacks.cpp */,
 				CFE810A02650CD1A00114D6D /* processVsThread.cpp */,
 				CFE810A12650CD1A00114D6D /* conditional_variables.cpp */,
 				CFE810A22650CD1A00114D6D /* lock_vs_try_lock.cpp */,
@@ -559,6 +640,15 @@
 				CFE810A82650CD1A00114D6D /* matrix_multiply_challenge.cpp */,
 			);
 			path = challenges;
+			sourceTree = "<group>";
+		};
+		CFE87EA926B5C6FB003C02D6 /* coding */ = {
+			isa = PBXGroup;
+			children = (
+				CFE87EAA26B5C717003C02D6 /* substrings.cpp */,
+				CFE87EAB26B5C717003C02D6 /* substrings.hpp */,
+			);
+			path = coding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -617,9 +707,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFE79E182665DADB00424962 /* nonModifying.cpp in Sources */,
 				CFE810B22650CD1A00114D6D /* lock_vs_try_lock.cpp in Sources */,
 				CFE810D92652BF1500114D6D /* array.cpp in Sources */,
 				CFBC362E259323E700C965C0 /* main.cpp in Sources */,
+				CFE6F135267963A2004A99EE /* callable_objects.cpp in Sources */,
 				CFE8102E2650CAFE00114D6D /* misc.cpp in Sources */,
 				CFE810BA2650CD1A00114D6D /* 1_threadStates.cpp in Sources */,
 				CFE810982650CCF600114D6D /* main.cpp in Sources */,
@@ -629,20 +721,25 @@
 				CFE810802650CCF600114D6D /* main.cpp in Sources */,
 				CFE810B52650CD1A00114D6D /* merge_sort_challenge.cpp in Sources */,
 				CFE810B02650CD1A00114D6D /* processVsThread.cpp in Sources */,
+				CFAA30F8267F88EC00DAB7FF /* 1_streams.cpp in Sources */,
 				CFE810322650CAFE00114D6D /* mapIteration.cpp in Sources */,
 				CFE810912650CCF600114D6D /* lamda.cpp in Sources */,
 				CFE8107F2650CCF600114D6D /* Makefile in Sources */,
 				CF2484C5265985C70072D867 /* functors.cpp in Sources */,
 				CFE810922650CCF600114D6D /* array.cpp in Sources */,
 				CFE810842650CCF600114D6D /* conversion.cpp in Sources */,
+				CF7F758A2667311400F7BED1 /* 2_modifying.cpp in Sources */,
 				CFE810B42650CD1A00114D6D /* misc.cpp in Sources */,
 				CFE8109A2650CCF600114D6D /* JSON.cpp in Sources */,
+				CFE6F13126794D9D004A99EE /* callbacks.cpp in Sources */,
 				CFE810902650CCF600114D6D /* lambdaCaptureList.cpp in Sources */,
 				CFE8108C2650CCF600114D6D /* Makefile in Sources */,
 				CFE810BB2650CD1A00114D6D /* schedulingThreads.cpp in Sources */,
+				CFE3048C26743275007ED1F0 /* async_future.cpp in Sources */,
 				CFE810D52652B6C800114D6D /* list.cpp in Sources */,
 				CFE8109D2650CCF600114D6D /* main.cpp in Sources */,
 				CFE810312650CAFE00114D6D /* mapFind.cpp in Sources */,
+				CF7F758D2669825600F7BED1 /* sortedDataAlgorithms.cpp in Sources */,
 				CFE8108B2650CCF600114D6D /* main.cpp in Sources */,
 				CFE8107E2650CCF600114D6D /* strings.cpp in Sources */,
 				CFE810B32650CD1A00114D6D /* detachedThread.cpp in Sources */,
@@ -657,6 +754,7 @@
 				CFE810972650CCF600114D6D /* main.cpp in Sources */,
 				CFE501D62654B28E002A2B5E /* set.cpp in Sources */,
 				CF2484BE265759A20072D867 /* map.cpp in Sources */,
+				CFE87EAC26B5C717003C02D6 /* substrings.cpp in Sources */,
 				CFE810B62650CD1A00114D6D /* download_images_challenge.cpp in Sources */,
 				CFE810832650CCF600114D6D /* main.cpp in Sources */,
 				CFE8108A2650CCF600114D6D /* uniquePointers.cpp in Sources */,
@@ -666,7 +764,9 @@
 				CFE810302650CAFE00114D6D /* 2_class_template.cpp in Sources */,
 				CFE810862650CCF600114D6D /* pointers2.cpp in Sources */,
 				CFE810B12650CD1A00114D6D /* conditional_variables.cpp in Sources */,
+				CF7F7587266680D300F7BED1 /* sorting.cpp in Sources */,
 				CFE810B82650CD1A00114D6D /* threadEndsWithItsTask.cpp in Sources */,
+				CF7F75842665DC6D00F7BED1 /* utils.cpp in Sources */,
 				CFE810872650CCF600114D6D /* main.cpp in Sources */,
 				CF2484C226586BD80072D867 /* algorithms.cpp in Sources */,
 				CFE8108D2650CCF600114D6D /* main.cpp in Sources */,

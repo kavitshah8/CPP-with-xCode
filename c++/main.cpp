@@ -1,18 +1,12 @@
 
 #include <iostream>
-#include <unistd.h>
-#include <thread>
-#include <shared_mutex>
-#include <future>
+#include "stl/containers/unordered/map.hpp"
 
-#include "substrings.hpp"
 using namespace std;
-
 
 int main(int argc, char **argv)
 {
-
-    generateAllSubstrings("abc");
-    generateAllSubstringsRecursion("abc", 0, 3);
+    basicsUnorderedMap();
+    HashTableAPIs();
     return 0;
 }

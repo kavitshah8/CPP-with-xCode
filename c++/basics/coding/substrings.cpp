@@ -18,7 +18,7 @@ void generateAllSubstrings(string s) {
 }
 
 void generateAllSubstringsRecursion(string s, int left, int right) {
-    if (left > right || left == right) return;
+    if (left > right) return;
     cout << s.substr(left, right) << endl;
     generateAllSubstringsRecursion(s, left, right - 1);
     generateAllSubstringsRecursion(s, left + 1, right);
