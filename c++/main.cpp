@@ -1,12 +1,10 @@
 
-#include <iostream>
-#include "stl/containers/unordered/map.hpp"
+#include "stl/containers/associative/map.hpp"
 
 using namespace std;
 
 int main(int argc, char **argv)
 {
-    basicsUnorderedMap();
-    HashTableAPIs();
+    basicsOfMap();
     return 0;
 }
