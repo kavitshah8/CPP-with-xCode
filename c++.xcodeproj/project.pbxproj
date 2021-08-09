@@ -301,9 +301,9 @@
 		CFE8101F2650CAFE00114D6D /* stl */ = {
 			isa = PBXGroup;
 			children = (
+				CFE810C72650FC2A00114D6D /* headers.h */,
 				CFAA30F9267F8C7700DAB7FF /* Bo */,
 				CF2484BF26586BC80072D867 /* algorithms */,
-				CFE810C72650FC2A00114D6D /* headers.h */,
 				CFE810202650CAFE00114D6D /* templates */,
 				CFE810242650CAFE00114D6D /* containers */,
 				CF2484C3265985C70072D867 /* functors.cpp */,
