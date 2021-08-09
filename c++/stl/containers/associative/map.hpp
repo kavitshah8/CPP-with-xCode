@@ -9,7 +9,11 @@
 #define map_hpp
 
 
-using namespace std;
+#include <iostream>
+#include <map>
+#include <string>
+#include <utility>
+
 
 /**
 

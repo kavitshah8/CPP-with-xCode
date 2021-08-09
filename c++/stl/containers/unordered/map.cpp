@@ -7,20 +7,6 @@
 
 #include "map.hpp"
 
-//
-//  map.hpp
-//  c++
-//
-//  Created by Kavit Shah on 5/20/21.
-//
-
-
-#include <iostream>
-#include <vector>
-#include <string>
-#include <unordered_map>
-#include <unordered_set>
-
 using namespace std;
 
 /**

@@ -8,7 +8,7 @@
 #ifndef set_hpp
 #define set_hpp
 
-#include <stdio.h>
+#include <iostream>
 #include <set>
 
 using namespace std;

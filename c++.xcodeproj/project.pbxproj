@@ -176,7 +176,7 @@
 		CFE810AD2650CD1A00114D6D /* schedulingThreads.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = schedulingThreads.cpp; sourceTree = "<group>"; };
 		CFE810AE2650CD1A00114D6D /* 2_detachedThreads.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = 2_detachedThreads.cpp; sourceTree = "<group>"; };
 		CFE810C72650FC2A00114D6D /* headers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = headers.h; sourceTree = "<group>"; };
-		CFE810CC2650FCE000114D6D /* vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vector.h; sourceTree = "<group>"; };
+		CFE810CC2650FCE000114D6D /* vector.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = vector.hpp; sourceTree = "<group>"; };
 		CFE810CF2652AE9F00114D6D /* deque.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = deque.cpp; sourceTree = "<group>"; };
 		CFE810D02652AE9F00114D6D /* deque.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = deque.hpp; sourceTree = "<group>"; };
 		CFE810D32652B6C800114D6D /* list.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = list.cpp; sourceTree = "<group>"; };
@@ -328,25 +328,25 @@
 				CF2484B8265758790072D867 /* unordered */,
 				CFE501D32654B273002A2B5E /* associative */,
 				CFE810262650CAFE00114D6D /* README.md */,
-				CFE810272650CAFE00114D6D /* map */,
+				CFE810272650CAFE00114D6D /* miscMap */,
 				CFE8102A2650CAFE00114D6D /* sequence */,
 			);
 			path = containers;
 			sourceTree = "<group>";
 		};
-		CFE810272650CAFE00114D6D /* map */ = {
+		CFE810272650CAFE00114D6D /* miscMap */ = {
 			isa = PBXGroup;
 			children = (
 				CFE810282650CAFE00114D6D /* mapFind.cpp */,
 				CFE810292650CAFE00114D6D /* mapIteration.cpp */,
 			);
-			path = map;
+			path = miscMap;
 			sourceTree = "<group>";
 		};
 		CFE8102A2650CAFE00114D6D /* sequence */ = {
 			isa = PBXGroup;
 			children = (
-				CFE810CC2650FCE000114D6D /* vector.h */,
+				CFE810CC2650FCE000114D6D /* vector.hpp */,
 				CFE8102B2650CAFE00114D6D /* vector.cpp */,
 				CFE810CF2652AE9F00114D6D /* deque.cpp */,
 				CFE810D02652AE9F00114D6D /* deque.hpp */,

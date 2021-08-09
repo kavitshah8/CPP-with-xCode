@@ -8,7 +8,7 @@
 #ifndef deque_hpp
 #define deque_hpp
 
-#include <stdio.h>
+#include <iostream>
 #include <deque>
 using namespace std;
 /**

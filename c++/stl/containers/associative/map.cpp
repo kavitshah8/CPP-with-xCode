@@ -7,11 +7,6 @@
 
 #include "map.hpp"
 
-#include <iostream>
-#include <map>
-#include <string>
-#include <utility>
-
 using namespace std;
 
 void basicsOfMap()

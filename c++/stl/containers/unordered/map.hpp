@@ -8,7 +8,8 @@
 #ifndef map_hpp
 #define map_hpp
 
-#include <stdio.h>
+#include <iostream>
+#include <string>
 #include <vector>
 #include <unordered_map>
 #include <unordered_set>
